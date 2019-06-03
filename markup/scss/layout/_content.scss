@@ -1439,7 +1439,7 @@
 .blog-section {
     margin: 0 0 50px;
     @include media ('>=desktop') {
-        margin: 0 0 100px;
+        margin: 0 0 86px;
     }
     .container {
         max-width: 996px;
@@ -1556,5 +1556,183 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+    }
+}
+
+.social-section {
+    text-align: center;
+    padding: 75px 0 25px;
+    background-image: url(../images/img23.jpg);
+    background-size: cover;
+    position: relative;
+    margin: 0 0 50px;
+    @include media ('>=desktop') {
+        margin: 0 0 100px;
+        padding: 95px 0 85px;
+    }
+    &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        background: #ff0036;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hexagon {
+        background: #ff0036;
+        &:before {
+            border-color: transparent transparent transparent #ff0036;
+        }
+        &:after {
+            border-color: transparent #ff0036 transparent transparent;
+        }
+    }
+    h2 {
+        margin:0 0 70px;
+        color: #ffffff;
+        font-family: $raleway-font;
+        font-size: 30px;
+        font-weight: 700;
+        padding: 0;
+        span {
+            color: #ff0036;
+        }
+    }
+    .social-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            padding: 0 45px;
+            margin: 0;
+        }
+        p {
+            padding: 0;
+            margin: 0 0 50px;
+            color: #ffffff;
+            @include media ('>=desktop') {
+                margin: 0;
+            }
+        }
+        a {
+            display: inline-block;
+            color: #ff0036;
+            font-size: 20px;
+            position: relative;
+            margin: 0 0 30px;
+            @include media ('>=desktop') {
+                margin: 0 0 50px;
+            }
+            &:after {
+                content: '';
+                display: inline-block;
+                background-image: url(../images/png15.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 77px;
+                height: 68px;
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+                &:hover {
+                    background-color: #ff0036;
+                }
+            }
+        }
+        .social-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 77px;
+            height: 68px;
+        }
+    }
+}
+
+.maps-section {
+    
+}
+
+.info-maps-holder {
+    background-image: url(../images/img21.jpg);
+    background-size: cover;
+    .container {
+        display: flex;
+        align-items: center;
+        max-width: 915px;
+        padding: 100px 0 0;
+    }
+    .contact-col-1 {
+        display: inline-block;
+        padding: 25px 80px 40px 23px;
+        margin: 0 130px 0 30px;
+        background-color: #262626;
+        p {
+            margin: 0 0 5px;
+            padding: 0;
+            color: #ffffff;
+        }
+    }
+    .contact-col-2 {
+        padding: 40px;
+        background-color: #fff;
+        h3 {
+            font-family: $raleway-font;
+            font-weight: 500;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin: 0 0 45px;
+        }
+    }
+    .request-form {
+        display: flex;
+        flex-direction: column;
+        input {
+            min-width: 379px;
+            margin: 0 0 10px;
+            color: #505050;
+        }
+        textarea {
+            min-width: 377px;
+            min-height: 86px;
+            margin: 0 0 27px;
+        }
+        input,
+        textarea {
+            border: 1px solid #e7e7e7;
+        }
+        button {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            background-color: #262626;
+            color: #ffffff;
+            border: none;
+            text-transform: uppercase;
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #262626;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    img {
+        margin: 0 0 0 600px;
+    }
+    p {
+        margin: 0 30px 0 0;
+        color: #8e8e8e;
     }
 }
