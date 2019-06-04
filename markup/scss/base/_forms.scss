@@ -16,10 +16,13 @@ input[type='password'] {
 	box-sizing: border-box;
 	border: 1px solid $form-element-border-color;
 	padding: $form-element-padding;
-	min-width: 379px;
-	margin: 0 0 10px;
+	min-width: 249px;
+	margin: 0 0 20px;
 	color: #505050;
 	border: 1px solid #e7e7e7;
+	@include media ('>=desktop') {
+		min-width: 379px;
+	}
 	&:focus {
 		border-color: $form-element-focus-border-color;
 	}
@@ -30,11 +33,14 @@ input[type='password'] {
 }
 
 textarea {
-	min-width: 377px;
+	min-width: 249px;
 	min-height: 86px;
 	margin: 0 0 27px;
 	resize: none;
 	border: 1px solid #e7e7e7;
+	@include media ('>=desktop') {
+		min-width: 379px;
+	}
 }
 
 select {
@@ -59,4 +65,5 @@ input[type='submit'] {
 	&:hover {
 		opacity: .8;
 	}
+	
 }

@@ -616,10 +616,17 @@ input[type='password'] {
   box-sizing: border-box;
   border: 1px solid #999;
   padding: 0.4em 0.7em;
-  min-width: 379px;
-  margin: 0 0 10px;
+  min-width: 249px;
+  margin: 0 0 20px;
   color: #505050;
   border: 1px solid #e7e7e7; }
+  @media (min-width: 1024px) {
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'],
+    input[type='search'],
+    input[type='password'] {
+      min-width: 379px; } }
   input[type='text']:focus,
   input[type='tel']:focus,
   input[type='email']:focus,
@@ -659,11 +666,14 @@ input[type='password'] {
     color: #505050; }
 
 textarea {
-  min-width: 377px;
+  min-width: 249px;
   min-height: 86px;
   margin: 0 0 27px;
   resize: none;
   border: 1px solid #e7e7e7; }
+  @media (min-width: 1024px) {
+    textarea {
+      min-width: 379px; } }
 
 select {
   -webkit-border-radius: 0; }
@@ -2386,53 +2396,68 @@ input[type='submit'] {
   background-position: 50% 0;
   position: relative; }
   .info-maps-holder .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    text-align: center;
     max-width: 915px;
     padding: 100px 0 0; }
+    @media (min-width: 768px) {
+      .info-maps-holder .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .info-maps-holder .address-holder {
     display: inline-block;
-    padding: 25px 80px 40px 23px;
-    margin: 0 130px 0 30px;
+    padding: 20px 40px;
+    margin: 0 0 50px;
     background-color: #262626;
-    position: absolute;
-    top: 250px;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    left: calc(50% - 300px); }
-    .info-maps-holder .address-holder:before {
-      content: '';
-      display: inline-block;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 60px 15px 0 15px;
-      border-color: #262626 transparent transparent transparent;
-      position: absolute;
-      top: 99%;
-      right: 25px;
-      -webkit-transform: skew(-30deg);
-          -ms-transform: skew(-30deg);
-              transform: skew(-30deg); }
+    position: relative; }
+    @media (min-width: 768px) {
+      .info-maps-holder .address-holder {
+        padding: 25px 80px 40px 23px;
+        margin: 0 50px 0 30px;
+        width: 40%; }
+        .info-maps-holder .address-holder:before {
+          content: '';
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 60px 15px 0 15px;
+          border-color: #262626 transparent transparent transparent;
+          position: absolute;
+          top: 99%;
+          right: 25px;
+          -webkit-transform: skew(-30deg);
+              -ms-transform: skew(-30deg);
+                  transform: skew(-30deg); } }
+    @media (min-width: 1024px) {
+      .info-maps-holder .address-holder {
+        margin: 0 130px -40px 0; } }
     .info-maps-holder .address-holder p {
       margin: 0 0 5px;
       padding: 0;
-      color: #ffffff; }
+      color: #ffffff;
+      font-size: 13px; }
+      @media (min-width: 1024px) {
+        .info-maps-holder .address-holder p {
+          font-size: 16px; } }
   .info-maps-holder .form-holder {
     padding: 40px;
     background-color: #fff;
     margin: 0 0 0 auto; }
+    @media (min-width: 768px) {
+      .info-maps-holder .form-holder {
+        margin: 0 20px 0 0;
+        width: 50%; } }
     .info-maps-holder .form-holder h3 {
       font-family: "Raleway", sans-serif;
       font-weight: 500;
       font-size: 20px;
       text-transform: uppercase;
-      margin: 0 0 45px; }
+      margin: 0 0 45px;
+      text-align: left; }
   .info-maps-holder .request-form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2452,10 +2477,24 @@ input[type='submit'] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 0; }
-  .footer img {
-    margin: 0 0 0 600px; }
+  padding: 60px 0 0;
+  position: relative; }
+  @media (min-width: 1024px) {
+    .footer {
+      padding: 30px 0; } }
+  .footer .link-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .footer p {
-    margin: 0 30px 0 0;
-    color: #8e8e8e; }
+    margin: 5px auto;
+    color: #8e8e8e;
+    font-size: 13px; }
+    @media (min-width: 1024px) {
+      .footer p {
+        margin: 0 30px 0 auto;
+        font-size: 16px; } }
 /*# sourceMappingURL=main.css.map */

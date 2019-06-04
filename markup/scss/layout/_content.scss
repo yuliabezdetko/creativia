@@ -1659,59 +1659,72 @@
     }
 }
 
-.maps-section {
-    
-}
-
 .info-maps-holder {
     background-image: url(../images/img21.jpg);
     background-size: cover;
     background-position: 50% 0;
     position: relative;
     .container {
-        display: flex;
-        align-items: center;
+        text-align: center;
         max-width: 915px;
         padding: 100px 0 0;
+        @include media ('>=tablet') {
+            display: flex;
+            align-items: center;
+        }
     }
     .address-holder {
         display: inline-block;
-        padding: 25px 80px 40px 23px;
-        margin: 0 130px 0 30px;
+        padding: 20px 40px;
+        margin: 0 0 50px;
         background-color: #262626;
-        position: absolute;
-        top: 250px;
-        transform: translateX(-50%);
-        left: calc(50% - 300px);
-        &:before {
-            content: '';
-            display: inline-block;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 60px 15px 0 15px;
-            border-color: #262626 transparent transparent transparent;
-            position: absolute;
-            top: 99%;
-            right: 25px;
-            transform: skew(-30deg);
+        position: relative;
+        @include media ('>=tablet') {
+            padding: 25px 80px 40px 23px; 
+            margin: 0 50px 0 30px;
+            width: 40%;
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 60px 15px 0 15px;
+                border-color: #262626 transparent transparent transparent;
+                position: absolute;
+                top: 99%;
+                right: 25px;
+                transform: skew(-30deg);
+            }
+        }
+        @include media ('>=desktop') {
+            margin: 0 130px -40px 0;
         }
         p {
             margin: 0 0 5px;
             padding: 0;
             color: #ffffff;
+            font-size: 13px;
+            @include media ('>=desktop') {
+                font-size: 16px;
+            }
         }
     }
     .form-holder {
         padding: 40px;
         background-color: #fff;
         margin: 0 0 0 auto;
+        @include media ('>=tablet') {
+            margin: 0 20px 0 0;
+            width: 50%;
+        }
         h3 {
             font-family: $raleway-font;
             font-weight: 500;
             font-size: 20px;
             text-transform: uppercase;
             margin: 0 0 45px;
+            text-align: left;
         }
     }
     .request-form {
@@ -1727,12 +1740,24 @@
     background-color: #262626;
     display: flex;
     justify-content: space-between;
-    padding: 30px 0;
-    img {
-        margin: 0 0 0 600px;
+    padding: 60px 0 0;
+    position: relative;
+    @include media ('>=desktop') {
+        padding: 30px 0; 
+    }
+    .link-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     p {
-        margin: 0 30px 0 0;
+        margin: 5px auto;
         color: #8e8e8e;
+        font-size: 13px;
+        @include media ('>=desktop') {
+            margin: 0 30px 0 auto; 
+            font-size: 16px; 
+        }
     }
 }
