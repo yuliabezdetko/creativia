@@ -874,6 +874,10 @@ input[type='submit'] {
   background-image: url(../images/img1.jpg);
   background-size: cover;
   position: relative; }
+  .description-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .description-section h2,
   .description-section p {
     text-align: center; }
@@ -1875,7 +1879,8 @@ input[type='submit'] {
     margin: 0 0 35px; }
     @media (min-width: 1024px) {
       .skills-holder .project-holder {
-        margin: 0 50px 0 0; }
+        margin: 0 50px 0 0;
+        width: 25%; }
         .skills-holder .project-holder:last-child {
           margin: 0; } }
     .skills-holder .project-holder .progress-bar {

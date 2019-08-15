@@ -9,6 +9,9 @@
     background-image: url(../images/img1.jpg);
     background-size: cover;
     position: relative;
+    .container {
+        display: flex;
+    }
     h2,
     p {
         text-align: center;
@@ -1077,6 +1080,7 @@
         margin: 0 0 35px;
         @include media ('>=desktop') {
             margin: 0 50px 0 0;
+            width: 25%;
             &:last-child {
                 margin: 0;
             }
